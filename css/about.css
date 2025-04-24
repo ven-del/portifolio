@@ -1,0 +1,77 @@
+.navbar-list {
+  padding-left: 120px;
+  padding-top: 68px;
+  display: flex;
+  gap: 4rem;
+  list-style-type: none;
+  color: red;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+}
+
+
+.about-me {
+  background-color: rgba(255, 255, 255, 0.1);
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 40%;
+  text-align: justify;
+  padding: 1rem 1.4rem;
+  border: 2px solid red;
+}
+
+.about-me h1 {
+  font-size: 3rem;
+}
+
+.about-me p {
+  font-weight: 300;
+}
+
+.about-me-image {
+  width: 25rem;
+  border-radius: 50%;
+  border: 2px solid white;
+  height: fit-content;
+}
+
+@media only screen and (max-width: 768px) {
+
+    body {
+        justify-content: center;
+    }
+
+    .navbar-list {
+        justify-content: center;
+        padding-left: 0;
+        padding-top: 40px; 
+        margin-bottom: 0;
+    }
+    
+    main {
+        margin-top: 0;
+        flex-direction: column-reverse;
+        padding-left: 0;
+        gap: 1rem;
+    }
+
+    .about-me-image {
+        width: 18rem;
+    }
+
+    .about-me {
+        width: 70%;
+        height: 400px;
+        overflow-y: auto;
+    }
+
+    .about-me h1 {
+        text-align: center;
+    }
+
+    .about-me p {
+        font-size: 1.2rem;
+    }
+}
