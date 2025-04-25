@@ -1,13 +1,4 @@
-.navbar-list {
-  padding-left: 120px;
-  padding-top: 68px;
-  display: flex;
-  gap: 4rem;
-  list-style-type: none;
-  font-weight: 700;
-  font-size: 1.5rem;
-  margin-bottom: 3rem;
-}
+
 
 .page {
   text-decoration: none;
@@ -80,26 +71,16 @@
 
 @media only screen and (max-width: 768px) {
 
-    body {
-        justify-content: center;
-        padding: 0;
-    }
-
-    .navbar-list {
-        justify-content: center;
-        padding-left: 0;
-        padding-top: 40px; 
-        margin-bottom: 0;
-    }
-
     .introduce {
       justify-content: flex-end;
       width: 80%;
       margin-bottom: 8rem;
+      gap: 1rem;
     }
 
-    .container-logo {
-        height: 15rem;
+    .introduce p {
+      font-size: 1.2rem;
+      padding-bottom: 2rem;
     }
 
     .logo {
