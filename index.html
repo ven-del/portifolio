@@ -1,49 +1,56 @@
 <!DOCTYPE html>
 <html lang="pt-br">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portifólio de Desenvolvedor</title>
-</head>
-<body>
-    <h1>PORTIFÓLIO DE WENDELL REGIS</h1>
-    <img src="https://i.pinimg.com/736x/fa/0d/87/fa0d87499022a57c4eb6d2da7e67cea6.jpg" alt="Imagem do Desenvolvedor" height="250px" width="250px">
-
-    <h2>Links Diretos:</h2>
-    <a href="#about">Sobre mim</a>
-    <a href="#skills">Habilidades</a>
-    <a href="#school">Escolaridade</a>
-    <a href="#work">Experiência</a>
-    <a target="_blank" href="https://www.linkedin.com/in/ven-del/">LinkedIn</a>
-    
-
-    <div style="border: 1px solid; height: 100px; display: flex; align-items: center; justify-content: center; margin-top: 10px; "><button>Clica aqui em mim!</button></div>
-
-    <h2 id="about">Sobre mim:</h2>
-    <p>Sou um desenvolvedor web <strong>apaixonado por tecnologia e jogos</strong>. Tenho experiência em <b>HTML</b>, <b>CSS</b> e <b>JavaScript</b>.</p>
-    
-    <h2 id="skills">Habilidades técnicas</h2>
-    <p>Aqui está uma breve lista de minhas habilidades técnicas:</p>
-    <ul>
-        <li>HTML</li>
-        <li>CSS</li>
-        <li>JavaScript (em andamento)</li>
-        <li>React.js (em andamento)</li>
-        <li>Node.js (em andamento)</li>
-    </ul>
-
-    <h2 id="school">Escolaridade:</h2>
-    <p>Graduado em Análise e Desenvolvimento de Sistemas pela <i>UNIFOR</i>; <br>
-        Aluno do Geração Tech 2.0 pelo <i>IEL-CE</i>;
-    </p>
-
-    <h2 id="work">Experiência Profissional:</h2>
-    <p>Estas são <span>algumas</span> de minhas experiências profissionais:</p>
-    <ul>
-        <li>Analista;</li>
-        <li>Programador;</li>
-        <li>Fi duma égua;</li>
-    </ul>
-    <p><sup>*é importante lembrar que esta última experiência <em>contém sarcasmo</em>*</sup></p>
-</body>
-</html>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Portfolio</title>
+    <link rel="shortcut icon" href="/assets/Logo-LabCE2.png" type="image/x-icon">    
+  </head>
+      <body>
+        <header>
+          <nav>
+            <ul class="navbar-list">
+              <li>
+                <a href="/index.html" class="page active"> Home </a>
+              </li>
+              <li>
+                <a href="about-me.html" class="page"> Sobre mim </a>
+              </li>
+            </ul>
+          </nav>
+        </header>
+        <main>
+          <div class="introduce">
+            <span class="title">
+              <h1>Wendell Regis</h1>
+              <h2>Desenvolvedor Full Stack</h2>
+            </span>
+            <p>Olá! Sou Wendell Regis, desenvolvedor Front-end com especialidade em React, Javascript e NodeJs. Tudo o que vê aqui não passa de espelhos e fumaça. Quer que eu te ensine o truque?</p>
+            <ul class="social-links">
+                <a href="https://www.linkedin.com/in/ven-del/ " target="_blank">
+                    <li>
+                        <i class="fa-brands fa-linkedin"></i>
+                    Linkedin
+                    </li>
+                </a>
+              <a href="https://github.com/ven-del" target="_blank">
+              <li>
+                  <i class="fa-brands fa-github"></i>
+                  Github
+              </li>
+            </a>
+              <a href="https://labce-curriculo.vercel.app/" target="_blank">
+                <li>
+                  <i class="fa-solid fa-file"></i>
+                  Currículo Online
+                </li>
+            </a>
+            </ul>
+          </div>
+          <img src="/assets/profile-image.jfif" alt="" class="logo" />
+        </main>
+        <footer>Desenvolvido por Wendell Regis @ Laboratório.CE</footer>
+      </body>
+    </html>

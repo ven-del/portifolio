@@ -1,0 +1,118 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("/css/home.css");
+@import url("/css/about.css");
+
+:root {
+  --gradient-light-purple: #2a0055;
+  --gradient-deep-purple: #0f0a1e;
+  --color-title-white: azure;
+  --color-title-purple: #7145f6;
+  --color-off-white: #F1F1FF;
+  --color-link-white: antiquewhite;
+  --button-background-purple: #2c2543;
+  --button-text-color: #2C0A55;
+  --button-border-white: rgba(250, 235, 215, 0.479)
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Montserrat", sans-serif;
+}
+
+
+body {
+  width: 100%;
+  background: linear-gradient(to top right, var(--gradient-light-purple) , var(--gradient-deep-purple));
+  color: var(--color-title-white);
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+}
+
+.navbar-list {
+  padding-left: 120px;
+  padding-top: 68px;
+  display: flex;
+  gap: 4rem;
+  list-style-type: none;
+  font-weight: 700;
+  font-size: 1.5rem;
+  margin-bottom: 3rem;
+  align-items: center;
+}
+
+main {
+  padding-left: 120px;
+  display: flex;
+  gap: 10rem;
+  align-items: center;
+  justify-content: space-around;
+}
+
+footer {
+  margin-top: auto;
+  padding: 1rem 0 1rem 0;
+  background-color: var(--gradient-light-purple);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  flex-shrink: 0;
+  border-top: .1rem solid rgba(0, 0, 0, 0.2);
+}
+
+footer ul {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    margin-bottom: 1rem;
+}
+
+footer a {
+    text-decoration: none;
+    color: var(--color-link-white);
+    font-weight: 600;
+}
+
+@media only screen and (max-width: 768px) { 
+  body {
+    justify-content: space-between;
+    padding: 0;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+  
+  main {
+    margin-top: 0;
+    flex-direction: column-reverse;
+    padding-left: 0;
+    gap: 1rem;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  .navbar-list {
+    justify-content: center;
+    padding-left: 0;
+    padding-top: 40px; 
+    margin-bottom: 0;
+}
+
+.social-links {
+    padding-left: 0;
+    margin-bottom: 0;
+    margin-top: 4rem;
+}
+}
+
+@media only screen and (max-width: 425px) {
+  footer {
+    text-align: center;
+    font-size: .8rem;
+  }
+
+}
