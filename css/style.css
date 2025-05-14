@@ -29,6 +29,7 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  min-height: 100vh;
 }
 
 .navbar-list {
@@ -40,6 +41,7 @@ body {
   font-weight: 700;
   font-size: 1.5rem;
   margin-bottom: 3rem;
+  align-items: center;
 }
 
 main {
@@ -47,6 +49,7 @@ main {
   display: flex;
   gap: 10rem;
   align-items: center;
+  justify-content: space-around;
 }
 
 footer {
