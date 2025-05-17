@@ -1,56 +1,70 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
+    <link rel="icon" type="image/svg+xml" href="/assets/Logo-LabCE2.png" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-    <link rel="stylesheet" href="/css/style.css">
-    <title>Portfolio</title>
-    <link rel="shortcut icon" href="/assets/Logo-LabCE2.png" type="image/x-icon">    
+    <title>Wendell Regis | Portfólio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        theme: {
+    extend: {
+      colors: {
+        // Paleta padrão (roxo)
+        primary: {
+          light: '#7145f6',
+          DEFAULT: '#2a0055',
+          dark: '#0f0a1e',
+        },
+        // Paleta alternativa 1 (azul)
+        blue: {
+          light: '#45a1f6',
+          DEFAULT: '#003b55',
+          dark: '#0a141e',
+        },
+        // Paleta alternativa 2 (verde)
+        green: {
+          light: '#45f67d',
+          DEFAULT: '#005527',
+          dark: '#0a1e0f',
+        },
+        // Paleta alternativa 3 (vermelho)
+        red: {
+          light: '#f64545',
+          DEFAULT: '#550000',
+          dark: '#1e0a0a',
+        },
+      },
+      fontFamily: {
+        montserrat: ['Montserrat', 'sans-serif'],
+      },
+      animation: {
+        'slide-up': 'slideUp 0.8s ease-out forwards',
+        'slide-in': 'slideIn 0.8s ease-out forwards',
+        'fade-in': 'fadeIn 0.8s ease-out forwards',
+      },
+      keyframes: {
+        slideUp: {
+          '0%': { transform: 'translateY(50px)', opacity: 0 },
+          '100%': { transform: 'translateY(0)', opacity: 1 },
+        },
+        slideIn: {
+          '0%': { transform: 'translateX(-50px)', opacity: 0 },
+          '100%': { transform: 'translateX(0)', opacity: 1 },
+        },
+        fadeIn: {
+          '0%': { opacity: 0 },
+          '100%': { opacity: 1 },
+        },
+      },
+    },
+  },
+      }
+    </script>
   </head>
-      <body>
-        <header>
-          <nav>
-            <ul class="navbar-list">
-              <li>
-                <a href="/index.html" class="page active"> Home </a>
-              </li>
-              <li>
-                <a href="about-me.html" class="page"> Sobre mim </a>
-              </li>
-            </ul>
-          </nav>
-        </header>
-        <main>
-          <div class="introduce">
-            <span class="title">
-              <h1>Wendell Regis</h1>
-              <h2>Desenvolvedor Full Stack</h2>
-            </span>
-            <p>Olá! Sou Wendell Regis, desenvolvedor Full Stack com especialidade em React, Javascript e NodeJs. Tudo o que vê aqui não passa de espelhos e fumaça. Quer que eu te ensine o truque?</p>
-            <ul class="social-links">
-                <a href="https://www.linkedin.com/in/ven-del/ " target="_blank">
-                    <li>
-                        <i class="fa-brands fa-linkedin"></i>
-                    Linkedin
-                    </li>
-                </a>
-              <a href="https://github.com/ven-del" target="_blank">
-              <li>
-                  <i class="fa-brands fa-github"></i>
-                  Github
-              </li>
-            </a>
-              <a href="https://labce-curriculo.vercel.app/" target="_blank">
-                <li>
-                  <i class="fa-solid fa-file"></i>
-                  Currículo Online
-                </li>
-            </a>
-            </ul>
-          </div>
-          <img src="/assets/pfp5.jpg" alt="" class="logo" />
-        </main>
-        <footer>Desenvolvido por Wendell Regis @ Laboratório.CE</footer>
-      </body>
-    </html>
+  <body>
+    <div id="root"></div>
+    <script type="module" src="/src/main.tsx"></script>
+  </body>
+</html>

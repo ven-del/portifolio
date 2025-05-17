@@ -1,0 +1,69 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html {
+    @apply scroll-smooth;
+  }
+  
+  body {
+    @apply font-montserrat bg-gradient-to-tr from-primary-dark via-primary to-primary-light text-white min-h-screen flex flex-col;
+  }
+}
+
+@layer components {
+  .section-container {
+    @apply min-h-screen flex flex-col justify-center items-center px-4 md:px-8 lg:px-16 py-20;
+  }
+  
+  .section-title {
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-center;
+  }
+  
+  .section-subtitle {
+    @apply text-xl md:text-2xl font-semibold mb-4 text-center;
+  }
+  
+  .card {
+    @apply bg-white/10 backdrop-blur-sm rounded-lg p-6 border border-white/20 shadow-lg transition-all duration-300;
+  }
+  
+  .card-hover {
+    @apply hover:shadow-xl hover:-translate-y-2 hover:border-white/30;
+  }
+  
+  .tech-badge {
+    @apply relative w-16 h-16 md:w-20 md:h-20 rounded-lg p-2 flex items-center justify-center overflow-hidden transition-all duration-300 hover:-translate-y-2 hover:shadow-lg;
+  }
+  
+  .tech-badge-shine {
+    @apply before:content-[''] before:absolute before:top-[-50%] before:left-[-50%] before:w-[200%] before:h-[200%] before:bg-gradient-to-br before:from-transparent before:via-white/50 before:to-transparent before:rotate-45 before:-translate-x-full before:opacity-0 hover:before:translate-x-full hover:before:opacity-100 before:transition-all before:duration-700 before:ease-out before:z-0;
+  }
+  
+  .nav-link {
+    @apply text-lg font-semibold px-4 py-2 rounded-md transition-all duration-300 hover:bg-white/10;
+  }
+  
+  .nav-link-active {
+    @apply bg-white/20;
+  }
+  
+  .social-link {
+    @apply flex items-center gap-2 text-white/80 hover:text-white transition-colors duration-300;
+  }
+  
+  .btn {
+    @apply px-6 py-3 rounded-md font-semibold transition-all duration-300 flex items-center justify-center gap-2;
+  }
+  
+  .btn-primary {
+    @apply bg-primary-light text-white hover:bg-primary-light/80;
+  }
+  
+  .btn-outline {
+    @apply border border-white/30 hover:bg-white/10;
+  }
+}
