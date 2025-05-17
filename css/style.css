@@ -45,12 +45,127 @@ body {
 }
 
 main {
-  padding-left: 120px;
+  margin-top: 5rem;
   display: flex;
-  gap: 10rem;
+  flex-wrap: wrap;
+  gap: 1rem;
   align-items: center;
-  justify-content: space-around;
+  justify-content: space-evenly;
 }
+
+.logo {
+  object-fit: contain;
+}
+
+.profile-section {
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+
+
+/* Seção de Tecnologias */
+.tech-section {
+  margin-top: 2rem;
+  text-align: center;
+  display: flex;
+  flex-flow: row wrap;
+  flex-grow: 4;
+  gap: 2rem;
+  /* max-width: 80%; */
+}
+
+.tech-section h2 {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+.tech-group {
+  margin-bottom: 2rem;
+}
+
+.tech-group h3 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: #333;
+  font-size: 1.3rem;
+}
+
+.tech-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: .5rem;
+  margin-top: 1rem;
+}
+
+.tech-badge {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
+  padding: 8px;
+  /* background-color: #f5f5f5; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.tech-badge img {
+  max-width: 100%;
+  max-height: 100%;
+  z-index: 1;
+}
+
+/* Efeito de brilho */
+.tech-badge::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.3) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(45deg);
+  transition: transform 2s ease;
+  z-index: 0;
+  opacity: 0;
+}
+
+.tech-badge:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+}
+
+.tech-badge:hover::before {
+  transform: rotate(45deg) translateX(100%);
+  opacity: 1;
+}
+
+/* Estilo específico para Amazon Q */
+.tech-badge.amazon-q img {
+  padding: 5px;
+  object-fit: contain;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .tech-badges {
+    gap: 1rem;
+  }
+  
+  .tech-badge {
+    width: 60px;
+    height: 60px;
+  }
+}
+
 
 footer {
   margin-top: auto;
@@ -88,7 +203,7 @@ footer a {
   
   main {
     margin-top: 0;
-    flex-direction: column-reverse;
+    flex-direction: column;
     padding-left: 0;
     gap: 1rem;
     align-items: center;
@@ -115,4 +230,306 @@ footer a {
     font-size: .8rem;
   }
 
+}
+
+/* Seção de perfil */
+.profile-section {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 10rem;
+  margin-bottom: 3rem;
+  width: 100%;
+}
+
+/* Seção de Tecnologias */
+.skills-container {
+  width: 100%;
+}
+
+.tech-section {
+  text-align: center;
+}
+
+.tech-group {
+  margin-bottom: 2rem;
+}
+
+.tech-group h3 {
+  margin-bottom: 1rem;
+  color: var(--color-title-white);
+  font-size: 1.3rem;
+}
+
+.tech-badges {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /* gap: 1.5rem; */
+  margin-top: 1rem;
+}
+
+.tech-badge {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  border-radius: 8px;
+  padding: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  overflow: hidden;
+}
+
+.tech-badge img {
+  max-width: 100%;
+  max-height: 100%;
+  z-index: 1;
+}
+
+/* Efeito de brilho aprimorado */
+.tech-badge::before {
+  content: '';
+  position: absolute;
+  top: -50%;
+  left: -50%;
+  width: 200%;
+  height: 200%;
+  background: linear-gradient(
+    to bottom right,
+    rgba(255, 255, 255, 0) 0%,
+    rgba(255, 255, 255, 0.5) 50%,
+    rgba(255, 255, 255, 0) 100%
+  );
+  transform: rotate(45deg) translateX(-100%);
+  transition: transform 0.6s ease;
+  z-index: 0;
+  opacity: 0;
+}
+
+.tech-badge:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+.tech-badge:hover::before {
+  transform: rotate(45deg) translateX(100%);
+  opacity: 1;
+}
+
+/* Seção especial para Amazon Q */
+.amazon-q-section {
+  margin-top: 3rem;
+  padding-top: 2rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.tech-badge.amazon-q img {
+  padding: 5px;
+  object-fit: contain;
+  background-color: white;
+  border-radius: 8px;
+}
+
+.amazon-q-description {
+  margin-top: 1rem;
+  font-style: italic;
+  color: var(--color-title-white);
+  text-align: center;
+}
+
+/* Responsividade para a seção de tecnologias */
+@media (max-width: 768px) {
+  .profile-section {
+    flex-direction: column;
+    gap: 2rem;
+    margin: 0;
+  }
+
+  .profile-section img {
+    flex-direction: column-reverse;
+  }
+  
+  .skills-container {
+    padding: 1rem;
+  }
+  
+  .tech-badges {
+    gap: 1rem;
+  }
+  
+  .tech-badge {
+    width: 60px;
+    height: 60px;
+  }
+}
+/* Estilos atualizados para responsividade */
+@media only screen and (max-width: 425px) {
+  main {
+    padding: 0 1rem;
+  }
+  
+  .navbar-list {
+    padding-top: 20px;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Reorganização dos elementos */
+  .profile-section {
+    flex-direction: column-reverse;
+    gap: 1.5rem;
+  }
+  
+  
+  .about-me {
+    width: 100%;
+    margin-bottom: 1.5rem;
+  }
+  
+  .about-me h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  
+  .skills-container {
+    padding: 1rem;
+    margin-top: 1rem;
+  }
+  
+  /* Um bloco de tecnologia por linha */
+  .tech-group {
+    width: 100%;
+    margin-bottom: 2.5rem;
+  }
+  
+  .tech-badges {
+    justify-content: center;
+  }
+  
+  .tech-badge {
+    width: 65px;
+    height: 65px;
+  }
+  
+  footer {
+    padding: 1rem;
+  }
+}
+/* Estilos para a seção de perfil */
+.profile-section {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  gap: 5rem;
+  margin-bottom: 3rem;
+  width: 100%;
+}
+
+/* Estilos para a seção de tecnologias */
+.skills-container {
+  width: 100%;
+  margin-top: 2rem;
+}
+
+.tech-title {
+  margin-top: 2rem;
+  text-align: center;
+}
+
+/* Responsividade para a seção de tecnologias */
+@media (max-width: 768px) {
+  .profile-section {
+    flex-direction: column;
+    gap: 2rem;
+    margin: 0;
+  }
+  
+  .skills-container {
+    padding: 1rem;
+  }
+}
+/* Correções de responsividade para telas pequenas */
+@media only screen and (max-width: 425px) {
+  main {
+    padding: 0 1rem;
+    flex-direction: column-reverse;
+  }
+  
+  .navbar-list {
+    padding-top: 20px;
+    margin-bottom: 1.5rem;
+    gap: 2rem;
+    font-size: 1.2rem;
+  }
+  
+  /* Reorganização dos elementos */
+  .profile-section {
+    flex-direction: column-reverse;
+    gap: 1.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .title h2 {
+    font-size: 1.4rem;
+    margin-bottom: 2rem;
+  }
+
+  .introduce p {
+    padding: 0;
+  }
+  
+  .logo {
+    margin-top: 0.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  .about-me {
+    width: 100%;
+    margin-bottom: 1rem;
+    overflow-y: auto;
+    max-height: 500px;
+  }
+  
+  .about-me h1 {
+    font-size: 2rem;
+    text-align: center;
+  }
+  
+  main > h2 {
+    text-align: center;
+    margin-bottom: 1rem;
+  }
+  
+  .skills-container {
+    padding: 1rem;
+    margin-top: 0;
+  }
+  
+  /* Um bloco de tecnologia por linha */
+  .tech-group {
+    width: 100%;
+    margin-bottom: 2.5rem;
+  }
+  
+  .tech-badges {
+    gap: 1rem;
+  }
+  
+  .tech-badge {
+    width: 55px;
+    height: 55px;
+  }
+
+  .tech-title {
+    text-align: center;
+  }
+  
+  .amazon-q-section {
+    padding-top: 1.5rem;
+  }
+  
+  .amazon-q-description {
+    font-size: 0.9rem;
+  }
 }
