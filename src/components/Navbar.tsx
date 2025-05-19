@@ -46,11 +46,31 @@ const Navbar = () => {
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-6">
-          <div className="flex gap-2 h-10 items-center">
-            <NavLink to="home" label="Home" closeMenu={closeMenu} />
-            <NavLink to="about" label="Sobre" closeMenu={closeMenu} />
-            <NavLink to="skills" label="Habilidades" closeMenu={closeMenu} />
-            <NavLink to="projects" label="Projetos" closeMenu={closeMenu} />
+          <div className="flex gap-8 h-10 items-center">
+            <NavLink
+              to="home"
+              label="Home"
+              closeMenu={closeMenu}
+              className="nav-link px-4 py-2"
+            />
+            <NavLink
+              to="about"
+              label="Sobre"
+              closeMenu={closeMenu}
+              className="nav-link px-4 py-2"
+            />
+            <NavLink
+              to="skills"
+              label="Habilidades"
+              closeMenu={closeMenu}
+              className="nav-link px-4 py-2"
+            />
+            <NavLink
+              to="projects"
+              label="Projetos"
+              closeMenu={closeMenu}
+              className="nav-link p-8"
+            />
           </div>
         </div>
 
@@ -83,16 +103,17 @@ interface NavLinkProps {
   to: string;
   label: string;
   closeMenu: () => void;
+  className?: string;
 }
 
-const NavLink = ({ to, label, closeMenu }: NavLinkProps) => (
+const NavLink = ({ to, label, closeMenu, className }: NavLinkProps) => (
   <Link
     to={to}
     spy={true}
     smooth={true}
     offset={-70}
     duration={500}
-    className="nav-link"
+    className={className ? className : "nav-link"}
     activeClass="nav-link-active"
     onClick={closeMenu}
   >

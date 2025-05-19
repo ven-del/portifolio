@@ -52,7 +52,7 @@
   }
   
   .section-title {
-    @apply text-3xl md:text-4xl lg:text-5xl font-bold mb-8 text-center;
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold text-center;
   }
   
   .section-subtitle {
@@ -76,7 +76,7 @@
   }
   
   .nav-link {
-    @apply text-lg font-semibold h-auto rounded-md transition-all duration-300 hover:bg-(--cosmic-light)/50;
+    @apply text-lg font-semibold rounded-md transition-all duration-300 hover:bg-(--cosmic-light)/50;
   }
   
   .nav-link-active {

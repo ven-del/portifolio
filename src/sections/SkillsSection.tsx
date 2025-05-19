@@ -1,30 +1,41 @@
-import { useState } from 'react';
-import { motion } from 'framer-motion';
-import TechBadge from '../components/TechBadge';
-import { techSkills } from '../data';
-import type { TechCategory } from '../types';
+import { useState } from "react";
+import { motion } from "framer-motion";
+import TechBadge from "../components/TechBadge";
+import { techSkills } from "../data";
+import type { TechCategory } from "../types";
 
 const SkillsSection = () => {
-  const [activeCategory, setActiveCategory] = useState<TechCategory | 'all'>('all');
+  const [activeCategory, setActiveCategory] = useState<TechCategory | "all">(
+    "all"
+  );
+  const [tooltip, setTooltip] = useState<{
+    x: number;
+    y: number;
+    text: string;
+  } | null>(null);
 
   const categories = [
-    { id: 'all', label: 'Todas' },
-    { id: 'web', label: 'Web' },
-    { id: 'framework', label: 'Frameworks' },
-    { id: 'language', label: 'Linguagens' },
-    { id: 'gamedev', label: 'Game Dev' },
-    { id: 'version-control', label: 'Controle de Versão' },
-    { id: 'os', label: 'Sistemas' },
-    { id: 'tool', label: 'Ferramentas' },
+    { id: "all", label: "Todas" },
+    { id: "web", label: "Web" },
+    { id: "framework", label: "Frameworks" },
+    { id: "language", label: "Linguagens" },
+    { id: "gamedev", label: "Game Dev" },
+    { id: "version-control", label: "Controle de Versão" },
+    { id: "os", label: "Sistemas" },
+    { id: "tool", label: "Ferramentas" },
   ];
 
-  const filteredSkills = activeCategory === 'all' 
-    ? techSkills 
-    : techSkills.filter(skill => skill.category === activeCategory);
+  const filteredSkills =
+    activeCategory === "all"
+      ? techSkills
+      : techSkills.filter((skill) => skill.category === activeCategory);
 
   return (
-    <section id="skills" className="section-container bg-gradient-to-b from-black/40 to-black/10">
-      <div className="container mx-auto">
+    <section
+      id="skills"
+      className="section-container bg-gradient-to-b from-black/40 to-black/10"
+    >
+      <div className="container flex flex-col gap-8 mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -42,14 +53,16 @@ const SkillsSection = () => {
           viewport={{ once: true }}
           className="flex flex-wrap justify-center gap-8 text-2xl"
         >
-          {categories.map(category => (
+          {categories.map((category) => (
             <button
               key={category.id}
-              onClick={() => setActiveCategory(category.id as TechCategory | 'all')}
-              className={`px-4 py-2 rounded-full transition-all ${
+              onClick={() =>
+                setActiveCategory(category.id as TechCategory | "all")
+              }
+              className={`px-6 py-2 w-auto rounded-full transition-all ${
                 activeCategory === category.id
-                  ? 'bg-white/20 shadow-lg'
-                  : 'bg-white/5 hover:bg-white/10'
+                  ? "bg-white/20 shadow-lg"
+                  : "bg-white/5 hover:bg-white/10"
               }`}
             >
               {category.label}
@@ -59,9 +72,36 @@ const SkillsSection = () => {
 
         <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 mt-8">
           {filteredSkills.map((tech, index) => (
-            <TechBadge key={tech.id} tech={tech} index={index} />
+            <div
+              key={tech.id}
+              className="relative group w-16 h-16 md:w-20 md:h-20"
+              onMouseMove={(e) => {
+                setTooltip({
+                  x: e.clientX,
+                  y: e.clientY,
+                  text: tech.name,
+                });
+              }}
+              onMouseLeave={() => setTooltip(null)}
+            >
+              <TechBadge tech={tech} index={index} />
+            </div>
           ))}
         </div>
+
+        {/* Tooltip global */}
+        {tooltip && (
+          <span
+            className="fixed px-3 py-1 rounded bg-black/80 text-white text-xs pointer-events-none transition-opacity duration-200 whitespace-nowrap z-50"
+            style={{
+              top: tooltip.y + 10,
+              left: tooltip.x + 30,
+              transform: "translate(-50%, 0)",
+            }}
+          >
+            {tooltip.text}
+          </span>
+        )}
 
         <motion.div
           initial={{ opacity: 0 }}
@@ -69,8 +109,7 @@ const SkillsSection = () => {
           transition={{ duration: 0.5, delay: 0.5 }}
           viewport={{ once: true }}
           className="mt-16 text-center"
-        >
-        </motion.div>
+        ></motion.div>
       </div>
     </section>
   );

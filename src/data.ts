@@ -139,6 +139,12 @@ export const techSkills: TechSkill[] = [
     name: 'Amazon Q',
     icon: 'src/assets/images/amazonQ.png',
     category: 'tool'
+  },
+  {
+    id: 'manus',
+    name: 'Manus',
+    icon: 'src/assets/images/manus.png',
+    category: 'tool'
   }
 ];
 
@@ -146,30 +152,57 @@ export const projects: Project[] = [
   {
     id: 'portfolio',
     title: 'Portfólio Pessoal',
-    description: 'Meu portfólio pessoal desenvolvido com React, TypeScript e Tailwind CSS.',
-    imageUrl: '/assets/images/portfolio.jpg',
+    description: 'Meu portfólio pessoal desenvolvido com React, TypeScript e Tailwind CSS. Este aqui onde você está agora.',
+    imageUrl: '/src/assets/images/portifolio.png',
     projectUrl: '#',
-    githubUrl: 'https://github.com/ven-del/portfolio',
-    technologies: ['react', 'typescript', 'tailwind']
+    githubUrl: 'https://github.com/ven-del/portifolio',
+    technologies: ['react', 'typescript', 'tailwind', 'vite', 'git', 'github']
   },
   {
-    id: 'game-prototype',
-    title: 'Protótipo de Jogo',
-    description: 'Um protótipo de jogo desenvolvido com Unity e C#.',
-    imageUrl: '/assets/images/game.jpg',
+    id: 'flappy-bird',
+    title: 'Réplica Flappy Bird',
+    description: 'Uma réplica do clássico para android e IOS para fins de estudos. Criado inteiramente com Python, pela biblioteca pygame.',
+    imageUrl: '/src/assets/images/flappybird.png',
     projectUrl: '#',
-    githubUrl: 'https://github.com/ven-del/game-prototype',
-    technologies: ['unity', 'csharp']
+    githubUrl: '#',
+    technologies: ['python', 'git', 'github']
   },
   {
     id: 'labce-curriculo',
     title: 'Currículo Online',
-    description: 'Currículo online desenvolvido com HTML, CSS e JavaScript.',
-    imageUrl: '/assets/images/curriculo.jpg',
+    description: 'Currículo online desenvolvido com HTML, CSS puros (vanilla).',
+    imageUrl: '/src/assets/images/curriculo.png',
     projectUrl: 'https://labce-curriculo.vercel.app/',
-    githubUrl: 'https://github.com/ven-del/labce-curriculo',
-    technologies: ['html', 'css', 'javascript']
-  }
+    githubUrl: 'https://github.com/ven-del/atividade-curriculo',
+    technologies: ['html', 'css', 'git', 'github']
+  },
+  {
+    id: 'treinofacil',
+    title: 'TreinoFacil',
+    description: 'Projeto final da turma do Geração Tech 2.0. Ainda em construção. Tenha paciência. :)',
+    imageUrl: '/src/assets/images/under-construction.jpg',
+    projectUrl: '#',
+    githubUrl: 'https://github.com/ven-del/treinofacil',
+    technologies: ['react', 'typescript', 'tailwind', 'vite', 'git', 'github']
+  },
+  {
+    id: 'calendario-seletivo',
+    title: 'Calendário Seletivo',
+    description: 'Projeto feito para praticar o DOM utilizando JavaScript. Também foi utilizado para praticar versionamento colaborativo.',
+    imageUrl: '/src/assets/images/calendarioseletivo.png',
+    projectUrl: 'https://labce-calendario-interativo.vercel.app/',
+    githubUrl: 'https://github.com/ven-del/exercicios-dom',
+    technologies: ['html', 'css', 'javascript', 'bootstrap', 'git', 'github']
+  },
+  {
+    id: 'tela-formulario',
+    title: 'Formulário de Cadastro',
+    description: 'Projeto feito para praticar o a criação de um formulário e uma tela atrativa, utilizando apenas HTML e CSS.',
+    imageUrl: '/src/assets/images/formulario.png',
+    projectUrl: 'https://labce-formulario.vercel.app/',
+    githubUrl: 'https://github.com/ven-del/tela-login2',
+    technologies: ['html', 'css', 'git', 'github']
+  },
 ];
 
 export const socialLinks: SocialLink[] = [

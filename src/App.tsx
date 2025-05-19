@@ -23,7 +23,6 @@ function App() {
           </main>
           <footer className="py-6 text-center bg-black/10">
             <p>Desenvolvido por Wendell Regis @ Laboratório.CE</p>
-            <p className="text-sm mt-2">Acelerado com Amazon Q e revisado com Manus</p>
           </footer>
         </div>
       </div>
