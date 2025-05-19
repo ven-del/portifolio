@@ -6,7 +6,7 @@ const ThemeSelector = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { currentTheme, setTheme } = useTheme();
 
-  const toggleOpen = () => setIsOpen(!isOpen);
+  
 
   return (
     <div className="relative">

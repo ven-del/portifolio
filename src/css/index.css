@@ -5,6 +5,11 @@
   --primary-dark: #18122B;
   --primary: #443C68;
   --primary-light: #635985;
+  --cosmic-darkest: #0a0011;
+  --cosmic-dark: #150025;
+  --cosmic-medium: #2d0052;
+  --cosmic-light: #5a1ca7;
+  --cosmic-lightest: #9370db;
 }
 
 * {

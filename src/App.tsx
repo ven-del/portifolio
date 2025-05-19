@@ -5,21 +5,25 @@ import AboutSection from "./sections/AboutSection";
 import HomeSection from "./sections/HomeSection";
 import ProjectsSection from "./sections/ProjectsSection";
 import SkillsSection from "./sections/SkillsSection";
+import StarField from "./components/StarField";
+import useSectionObserver from "./hooks/useSectionObserver";
 
 function App() {
+  useSectionObserver();
   return (
     <>
       <div className=" text-white p-4">
         <ThemeProvider>
           <div className="min-h-screen flex flex-col">
             <Navbar />
-            <main>
+            <StarField starCount={200} />
+            <main className="bg-cosmic galaxy-effect">
               <HomeSection />
               <AboutSection />
               <SkillsSection />
               <ProjectsSection />
             </main>
-            <footer className="py-6 text-center bg-black/30">
+            <footer className="py-6 text-center bg-black/10">
               <p>Desenvolvido por Wendell Regis @ Laboratório.CE</p>
               <p className="text-sm mt-2">Acelerado com Amazon Q</p>
             </footer>
