@@ -33,7 +33,7 @@ const Navbar = () => {
         scrolled ? "bg-black/50 backdrop-blur-md py-2 shadow-lg" : "py-6"
       }`}
     >
-      <div className="container mx-auto px-6 flex justify-between items-center cursor-pointer">
+      <div className="container mx-auto px-6 flex justify-between items-center">
         <Link
           to="home"
           spy={true}
@@ -45,8 +45,8 @@ const Navbar = () => {
         </Link>
 
         {/* Desktop Navigation */}
-        <div className="hidden md:flex items-center gap-6">
-          <div className="flex gap-8 h-10 items-center">
+        <div className="hidden md:flex items-center">
+          <div className="flex gap-4 h-10 items-center">
             <NavLink
               to="home"
               label="Home"
@@ -69,7 +69,7 @@ const Navbar = () => {
               to="projects"
               label="Projetos"
               closeMenu={closeMenu}
-              className="nav-link p-8"
+              className="nav-link px-4 py-2"
             />
           </div>
         </div>
@@ -88,10 +88,30 @@ const Navbar = () => {
       {isMenuOpen && (
         <div className="md:hidden absolute top-full left-0 w-full bg-black/90 backdrop-blur-md py-4 shadow-lg animate-fade-in">
           <div className="container mx-auto px-4 flex flex-col gap-4">
-            <NavLink to="home" label="Home" closeMenu={closeMenu} />
-            <NavLink to="about" label="Sobre" closeMenu={closeMenu} />
-            <NavLink to="skills" label="Habilidades" closeMenu={closeMenu} />
-            <NavLink to="projects" label="Projetos" closeMenu={closeMenu} />
+            <NavLink
+              to="home"
+              label="Home"
+              closeMenu={closeMenu}
+              className="nav-link px-4 py-2"
+            />
+            <NavLink
+              to="about"
+              label="Sobre"
+              closeMenu={closeMenu}
+              className="nav-link px-4 py-2"
+            />
+            <NavLink
+              to="skills"
+              label="Habilidades"
+              closeMenu={closeMenu}
+              className="nav-link px-4 py-2"
+            />
+            <NavLink
+              to="projects"
+              label="Projetos"
+              closeMenu={closeMenu}
+              className="nav-link px-4 py-2"
+            />
           </div>
         </div>
       )}

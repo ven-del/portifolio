@@ -22,15 +22,25 @@
 @layer base {
   html {
     @apply scroll-smooth;
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  html::-webkit-scrollbar {
+    @apply hidden; /* Chrome, Safari, Edge */
   }
   
   body {
-    @apply text-white min-h-screen flex flex-col;
+    @apply text-white min-h-screen flex flex-col overflow-x-hidden;
     background: linear-gradient(to right top, var(--primary-dark), var(--cosmic-dark), var(--cosmic-darkest));
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  body::-webkit-scrollbar {
+    @apply hidden; /* Chrome, Safari, Edge */
   }
   
   section {
-    @apply opacity-0 translate-y-5 transition-all duration-800 ease-in-out relative min-h-screen w-full flex flex-col justify-center items-center;
+    @apply opacity-0 translate-y-5 transition-all duration-800 ease-in-out relative min-h-screen w-full flex flex-col justify-center items-center snap-always snap-start;
   }
   
   section.visible {
@@ -44,15 +54,29 @@
   section.exiting {
     @apply opacity-0 -translate-y-5;
   }
+
+  .scrollbar-hide {
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none; /* IE and Edge */
+  }
+  
+  .scrollbar-hide::-webkit-scrollbar {
+    display: none; /* Chrome, Safari, Opera */
+  }
 }
 
 @layer components {
   .section-container {
-    @apply h-screen flex flex-col justify-center items-center px-4 md:px-8 lg:px-16 overflow-hidden;
+    @apply min-h-screen flex flex-col justify-center items-center px-4 md:px-8 lg:px-16 pt-20 pb-10 overflow-y-auto;
+    scrollbar-width: none; /* Firefox */
+  }
+  
+  .section-container::-webkit-scrollbar {
+    @apply hidden; /* Chrome, Safari, Edge */
   }
   
   .section-title {
-    @apply text-3xl md:text-4xl lg:text-5xl font-bold text-center;
+    @apply text-3xl md:text-4xl lg:text-5xl font-bold text-center mb-8;
   }
   
   .section-subtitle {
@@ -76,7 +100,7 @@
   }
   
   .nav-link {
-    @apply text-lg font-semibold rounded-md transition-all duration-300 hover:bg-(--cosmic-light)/50;
+    @apply text-lg font-semibold rounded-md transition-all duration-300 hover:bg-(--cosmic-light)/50 px-6 py-3 cursor-pointer;
   }
   
   .nav-link-active {

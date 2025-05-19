@@ -15,7 +15,7 @@ function App() {
         <div className="min-h-screen flex flex-col gap-5">
           <Navbar />
           <StarField starCount={200} />
-          <main className="">
+          <main className="snap-y snap-mandatory h-screen overflow-y-auto scrollbar-hide">
             <HomeSection />
             <AboutSection />
             <SkillsSection />

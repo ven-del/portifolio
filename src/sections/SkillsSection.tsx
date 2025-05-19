@@ -59,7 +59,7 @@ const SkillsSection = () => {
               onClick={() =>
                 setActiveCategory(category.id as TechCategory | "all")
               }
-              className={`px-6 py-2 w-auto rounded-full transition-all ${
+              className={`p-10 cursor-pointer rounded-full transition-all ${
                 activeCategory === category.id
                   ? "bg-white/20 shadow-lg"
                   : "bg-white/5 hover:bg-white/10"

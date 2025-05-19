@@ -5,8 +5,9 @@ const useSectionObserver = () => {
     const observerOptions = {
       root: null,
       rootMargin: '0px',
-      threshold: 0.2 // Trigger earlier for smoother transitions
+      threshold: 0.3 // Trigger earlier for smoother transitions
     };
+    
 
     const sectionObserver = new IntersectionObserver((entries) => {
       entries.forEach(entry => {
@@ -31,6 +32,9 @@ const useSectionObserver = () => {
               }, 1000);
             }
           });
+          if (!entry.target.classList.contains('active-section')) {
+            entry.target.classList.remove('visible');
+          }
         } else {
           // Only remove visible class when scrolling away
           entry.target.classList.remove('visible');
