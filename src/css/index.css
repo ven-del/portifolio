@@ -25,13 +25,30 @@
   }
   
   body {
-    @apply bg-gradient-to-tr from-(--primary-dark) via-(--primary) to-(--primary-light) text-white min-h-screen flex flex-col;
+    @apply text-white min-h-screen flex flex-col;
+    background: linear-gradient(to right top, var(--primary-dark), var(--cosmic-dark), var(--cosmic-darkest));
+  }
+  
+  section {
+    @apply opacity-0 translate-y-5 transition-all duration-800 ease-in-out relative min-h-screen w-full flex flex-col justify-center items-center;
+  }
+  
+  section.visible {
+    @apply opacity-100 translate-y-0;
+  }
+  
+  section.active-section {
+    @apply z-10;
+  }
+  
+  section.exiting {
+    @apply opacity-0 -translate-y-5;
   }
 }
 
 @layer components {
   .section-container {
-    @apply min-h-screen flex flex-col justify-center items-center px-4 md:px-8 lg:px-16 py-20;
+    @apply h-screen flex flex-col justify-center items-center px-4 md:px-8 lg:px-16 overflow-hidden;
   }
   
   .section-title {
@@ -80,5 +97,40 @@
   
   .btn-outline {
     @apply border border-white/30 hover:bg-white/10;
+  }
+  
+  .bg-cosmic {
+    @apply relative;
+    background: var(--cosmic-darkest);
+    background: linear-gradient(135deg, var(--cosmic-darkest) 0%, var(--cosmic-dark) 50%, var(--cosmic-medium) 100%);
+  }
+  
+  .galaxy-effect {
+    @apply relative overflow-hidden;
+  }
+  
+  .galaxy-effect::before {
+    content: '';
+    @apply absolute inset-0 opacity-30;
+    background-image: radial-gradient(var(--cosmic-light) 1px, transparent 1px);
+    background-size: 50px 50px;
+  }
+  
+  .star {
+    @apply absolute bg-white rounded-full z-[1];
+  }
+  
+  .star-twinkle {
+    animation: twinkle var(--duration) ease-in-out infinite;
+    opacity: var(--min-opacity);
+  }
+  
+  @keyframes twinkle {
+    0%, 100% {
+      opacity: var(--min-opacity);
+    }
+    50% {
+      opacity: var(--max-opacity);
+    }
   }
 }

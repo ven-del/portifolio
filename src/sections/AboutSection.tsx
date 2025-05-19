@@ -1,10 +1,6 @@
 import { motion } from 'framer-motion';
-import { useTheme } from '../context/ThemeContext';
 
 const AboutSection = () => {
-  const { getThemeClasses } = useTheme();
-  const { secondaryClass } = getThemeClasses();
-
   return (
     <section id="about" className="section-container bg-black/30">
       <div className="container mx-auto">
@@ -52,7 +48,7 @@ const AboutSection = () => {
                 alt="Wendell Regis"
                 className="w-full h-full object-cover"
               />
-              <div className={`absolute bottom-0 left-0 right-0 h-1/4 ${secondaryClass} opacity-60`}></div>
+              <div className="absolute bottom-0 left-0 right-0 h-1/4 bg-[var(--primary-light)] opacity-60"></div>
             </div>
           </motion.div>
         </div>

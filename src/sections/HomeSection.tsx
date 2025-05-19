@@ -3,14 +3,10 @@ import { Link } from 'react-scroll';
 import { FaChevronDown } from 'react-icons/fa';
 import SocialLinks from '../components/SocialLinks';
 import { socialLinks } from '../data';
-import { useTheme } from '../context/ThemeContext';
 
 const HomeSection = () => {
-  const { getThemeClasses } = useTheme();
-  const { gradientClass } = getThemeClasses();
-
   return (
-    <section id="home" className={`section-container ${gradientClass}`}>
+    <section id="home" className="section-container ">
       <div className="container mx-auto flex flex-col items-center justify-center text-center">
         <motion.div
           initial={{ opacity: 0, y: -20 }}

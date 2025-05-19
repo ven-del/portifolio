@@ -1,5 +1,4 @@
 import Navbar from "./components/Navbar";
-import { ThemeProvider } from "./context/ThemeContext";
 import "./css/App.css";
 import AboutSection from "./sections/AboutSection";
 import HomeSection from "./sections/HomeSection";
@@ -12,23 +11,21 @@ function App() {
   useSectionObserver();
   return (
     <>
-      <div className=" text-white p-4">
-        <ThemeProvider>
-          <div className="min-h-screen flex flex-col">
-            <Navbar />
-            <StarField starCount={200} />
-            <main className="bg-cosmic galaxy-effect">
-              <HomeSection />
-              <AboutSection />
-              <SkillsSection />
-              <ProjectsSection />
-            </main>
-            <footer className="py-6 text-center bg-black/10">
-              <p>Desenvolvido por Wendell Regis @ Laboratório.CE</p>
-              <p className="text-sm mt-2">Acelerado com Amazon Q</p>
-            </footer>
-          </div>
-        </ThemeProvider>
+      <div className="text-white p-4">
+        <div className="min-h-screen flex flex-col">
+          <Navbar />
+          <StarField starCount={200} />
+          <main className="">
+            <HomeSection />
+            <AboutSection />
+            <SkillsSection />
+            <ProjectsSection />
+          </main>
+          <footer className="py-6 text-center bg-black/10">
+            <p>Desenvolvido por Wendell Regis @ Laboratório.CE</p>
+            <p className="text-sm mt-2">Acelerado com Amazon Q</p>
+          </footer>
+        </div>
       </div>
     </>
   );
