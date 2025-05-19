@@ -1,4 +1,4 @@
-import type { Project, SocialLink, TechSkill, ThemeOption } from './types';
+import type { Project, SocialLink, TechSkill } from './types';
 
 export const techSkills: TechSkill[] = [
   // Web Development
@@ -190,36 +190,5 @@ export const socialLinks: SocialLink[] = [
     name: 'Currículo Online',
     url: 'https://labce-curriculo.vercel.app/',
     icon: 'file'
-  }
-];
-
-export const themeOptions: ThemeOption[] = [
-  {
-    id: 'purple',
-    name: 'Roxo (Padrão)',
-    primaryClass: 'from-primary-dark via-primary to-primary-light',
-    secondaryClass: 'bg-primary-light',
-    gradientClass: 'bg-gradient-to-tr from-primary-dark via-primary to-primary-light'
-  },
-  {
-    id: 'blue',
-    name: 'Azul',
-    primaryClass: 'from-blue-dark via-blue to-blue-light',
-    secondaryClass: 'bg-blue-light',
-    gradientClass: 'bg-gradient-to-tr from-blue-dark via-blue to-blue-light'
-  },
-  {
-    id: 'green',
-    name: 'Verde',
-    primaryClass: 'from-green-dark via-green to-green-light',
-    secondaryClass: 'bg-green-light',
-    gradientClass: 'bg-gradient-to-tr from-green-dark via-green to-green-light'
-  },
-  {
-    id: 'red',
-    name: 'Vermelho',
-    primaryClass: 'from-red-dark via-red to-red-light',
-    secondaryClass: 'bg-red-light',
-    gradientClass: 'bg-gradient-to-tr from-red-dark via-red to-red-light'
   }
 ];

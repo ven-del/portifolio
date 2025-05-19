@@ -30,11 +30,3 @@ export interface SocialLink {
   url: string;
   icon: string;
 }
-
-export interface ThemeOption {
-  id: string;
-  name: string;
-  primaryClass: string;
-  secondaryClass: string;
-  gradientClass: string;
-}
