@@ -34,13 +34,13 @@ const Navbar = () => {
         scrolled ? "bg-black/50 backdrop-blur-md py-2 shadow-lg" : "py-6"
       }`}
     >
-      <div className="container mx-auto px-4 flex justify-between items-center">
+      <div className="container mx-auto px-4 flex justify-between items-center cursor-pointer">
         <Link
           to="home"
           spy={true}
           smooth={true}
           duration={500}
-          className="text-2xl font-bold cursor-pointer"
+          className="text-2xl font-bold "
         >
           Wendell Regis
         </Link>
