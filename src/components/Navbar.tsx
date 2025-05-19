@@ -29,24 +29,24 @@ const Navbar = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 flex justify-around transition-all duration-300 ${
+      className={`fixed top-0 left-0 w-full z-50 h-auto flex justify-around transition-all duration-300 ${
         scrolled ? "bg-black/50 backdrop-blur-md py-2 shadow-lg" : "py-6"
       }`}
     >
-      <div className="container mx-auto px-4 flex justify-between items-center cursor-pointer">
+      <div className="container mx-auto px-6 flex justify-between items-center cursor-pointer">
         <Link
           to="home"
           spy={true}
           smooth={true}
           duration={500}
-          className="text-2xl font-bold "
+          className="text-2xl font-bold flex items-center"
         >
           Wendell Regis
         </Link>
 
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center gap-6">
-          <div className="flex gap-2">
+          <div className="flex gap-2 h-10 items-center">
             <NavLink to="home" label="Home" closeMenu={closeMenu} />
             <NavLink to="about" label="Sobre" closeMenu={closeMenu} />
             <NavLink to="skills" label="Habilidades" closeMenu={closeMenu} />

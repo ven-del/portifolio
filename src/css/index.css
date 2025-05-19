@@ -76,11 +76,11 @@
   }
   
   .nav-link {
-    @apply text-lg font-semibold px-4 py-2 rounded-md transition-all duration-300 hover:bg-white/10;
+    @apply text-lg font-semibold h-auto rounded-md transition-all duration-300 hover:bg-(--cosmic-light)/50;
   }
   
   .nav-link-active {
-    @apply bg-white/20;
+    @apply bg-(--cosmic-light)/50;
   }
   
   .social-link {
