@@ -18,7 +18,7 @@ const TechBadge = ({ tech, index }: TechBadgeProps) => {
       <img 
         src={tech.icon} 
         alt={tech.name} 
-        className="w-full h-full object-contain z-10" 
+        className="w-full h-full object-contain " 
       />
       <span className="sr-only">{tech.name}</span>
     </motion.div>

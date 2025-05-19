@@ -12,7 +12,7 @@ function App() {
   return (
     <>
       <div className="text-white p-4">
-        <div className="min-h-screen flex flex-col">
+        <div className="min-h-screen flex flex-col gap-5">
           <Navbar />
           <StarField starCount={200} />
           <main className="">
@@ -23,7 +23,7 @@ function App() {
           </main>
           <footer className="py-6 text-center bg-black/10">
             <p>Desenvolvido por Wendell Regis @ Laboratório.CE</p>
-            <p className="text-sm mt-2">Acelerado com Amazon Q</p>
+            <p className="text-sm mt-2">Acelerado com Amazon Q e revisado com Manus</p>
           </footer>
         </div>
       </div>

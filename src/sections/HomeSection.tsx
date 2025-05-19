@@ -7,7 +7,7 @@ import { socialLinks } from '../data';
 const HomeSection = () => {
   return (
     <section id="home" className="section-container ">
-      <div className="container mx-auto flex flex-col items-center justify-center text-center">
+      <div className="container mx-auto flex flex-col items-center justify-center text-center gap-5">
         <motion.div
           initial={{ opacity: 0, y: -20 }}
           animate={{ opacity: 1, y: 0 }}
