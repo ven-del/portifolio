@@ -1,5 +1,4 @@
 import { useState } from 'react';
-import { FaPalette } from 'react-icons/fa';
 import { themeOptions } from '../data';
 import { useTheme } from '../context/ThemeContext';
 
@@ -11,15 +10,6 @@ const ThemeSelector = () => {
 
   return (
     <div className="relative">
-      <button 
-        onClick={toggleOpen}
-        className="flex items-center gap-2 px-3 py-2 rounded-md bg-white/10 hover:bg-white/20 transition-colors"
-        aria-label="Selecionar tema"
-      >
-        <FaPalette />
-        <span className="hidden sm:inline">Tema</span>
-      </button>
-
       {isOpen && (
         <div className="absolute right-0 mt-2 w-48 bg-black/80 backdrop-blur-md rounded-md shadow-lg p-2 animate-fade-in z-50">
           {themeOptions.map(theme => (

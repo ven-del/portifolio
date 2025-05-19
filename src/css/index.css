@@ -1,10 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 @import "tailwindcss";
 
+:root {
+  --primary-dark: #18122B;
+  --primary: #443C68;
+  --primary-light: #635985;
+}
+
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
+  font-family: "Montserrat", serif;
 }
 
 @layer base {
@@ -13,8 +20,7 @@
   }
   
   body {
-    @apply bg-gradient-to-tr from-primary-dark via-primary to-primary-light text-white min-h-screen flex flex-col;
-    font-family: "Montserrat", serif;
+    @apply bg-gradient-to-tr from-(--primary-dark) via-(--primary) to-(--primary-light) text-white min-h-screen flex flex-col;
   }
 }
 
@@ -64,7 +70,7 @@
   }
   
   .btn-primary {
-    @apply bg-primary-light text-white hover:bg-primary-light/80;
+    @apply bg-[--primary-light] text-white hover:bg-[--primary-light]/80;
   }
   
   .btn-outline {

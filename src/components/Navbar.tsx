@@ -29,17 +29,17 @@ const Navbar = () => {
   };
 
   return (
-    <nav 
+    <nav
       className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
-        scrolled ? 'bg-black/50 backdrop-blur-md py-2 shadow-lg' : 'py-6'
+        scrolled ? "bg-black/50 backdrop-blur-md py-2 shadow-lg" : "py-6"
       }`}
     >
       <div className="container mx-auto px-4 flex justify-between items-center">
-        <Link 
-          to="home" 
-          spy={true} 
-          smooth={true} 
-          duration={500} 
+        <Link
+          to="home"
+          spy={true}
+          smooth={true}
+          duration={500}
           className="text-2xl font-bold cursor-pointer"
         >
           Wendell Regis
@@ -53,12 +53,12 @@ const Navbar = () => {
             <NavLink to="skills" label="Habilidades" closeMenu={closeMenu} />
             <NavLink to="projects" label="Projetos" closeMenu={closeMenu} />
           </div>
-          
+
           <ThemeSelector />
         </div>
 
         {/* Mobile Menu Button */}
-        <button 
+        <button
           className="md:hidden text-2xl"
           onClick={toggleMenu}
           aria-label="Toggle menu"
@@ -70,12 +70,12 @@ const Navbar = () => {
       {/* Mobile Navigation */}
       {isMenuOpen && (
         <div className="md:hidden absolute top-full left-0 w-full bg-black/90 backdrop-blur-md py-4 shadow-lg animate-fade-in">
-          <div className="container mx-auto px-4 flex flex-col gap-4">
+          <div className="container bg-(--primary-light)/50 mx-auto px-4 flex flex-col gap-4">
             <NavLink to="home" label="Home" closeMenu={closeMenu} />
             <NavLink to="about" label="Sobre" closeMenu={closeMenu} />
             <NavLink to="skills" label="Habilidades" closeMenu={closeMenu} />
             <NavLink to="projects" label="Projetos" closeMenu={closeMenu} />
-            
+
             <div className="pt-4 border-t border-white/20">
               <ThemeSelector />
             </div>

@@ -28,26 +28,13 @@ const AboutSection = () => {
           >
             <div className="card p-6 md:p-8">
               <p className="mb-4">
-                Olá! Sou Wendell Régis, um profissional de tecnologia com
-                trajetória iniciada no suporte técnico e evoluindo para áreas
-                como IAM, segurança da informação e, agora, desenvolvimento web.
-                Sou graduado em Análise e Desenvolvimento de Sistemas pela
-                Unifor e atualmente estudo desenvolvimento full stack com foco
-                em React, Node.js, TypeScript e Tailwind na Digital College
-                através do projeto Geração Tech 2.0.
+                Olá! Sou Wendell Régis, um profissional de tecnologia com trajetória iniciada no suporte técnico e evoluindo para áreas como IAM, segurança da informação e, agora, desenvolvimento web. Sou graduado em Análise e Desenvolvimento de Sistemas pela Unifor e atualmente estudo desenvolvimento full stack com foco em React, Node.js, TypeScript e Tailwind na Digital College através do projeto Geração Tech 2.0.
               </p>
               <p className="mb-4">
-                Apaixonado por tecnologia desde cedo, encontrei no
-                desenvolvimento de jogos uma forma criativa de unir lógica, arte
-                e propósito. No meu GitHub, compartilho experimentos e projetos
-                — incluindo um protótipo de jogo feito com Unity e Android
-                Studio, que representa meus primeiros passos práticos na área de
-                games.
+                Apaixonado por tecnologia desde cedo, encontrei no desenvolvimento de jogos uma forma criativa de unir lógica, arte e propósito. No meu GitHub, compartilho experimentos e projetos — incluindo um protótipo de jogo feito com Unity e Android Studio, que representa meus primeiros passos práticos na área de games.
               </p>
               <p>
-                Estou em constante aprendizado e cada linha de código escrita é
-                um passo a mais nessa jornada que une técnica, curiosidade e
-                vontade de construir soluções que façam a diferença.
+                Estou em constante aprendizado e cada linha de código escrita é um passo a mais nessa jornada que une técnica, curiosidade e vontade de construir soluções que façam a diferença.
               </p>
             </div>
           </motion.div>
@@ -65,9 +52,7 @@ const AboutSection = () => {
                 alt="Wendell Regis"
                 className="w-full h-full object-cover"
               />
-              <div
-                className={`absolute bottom-0 left-0 right-0 h-1/4 ${secondaryClass} opacity-60`}
-              ></div>
+              <div className={`absolute bottom-0 left-0 right-0 h-1/4 ${secondaryClass} opacity-60`}></div>
             </div>
           </motion.div>
         </div>

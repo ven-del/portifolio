@@ -9,7 +9,7 @@ import SkillsSection from "./sections/SkillsSection";
 function App() {
   return (
     <>
-      <div className="bg-blue-500 text-white p-4">
+      <div className=" text-white p-4">
         <ThemeProvider>
           <div className="min-h-screen flex flex-col">
             <Navbar />
