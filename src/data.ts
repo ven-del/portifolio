@@ -1,4 +1,12 @@
 import type { Project, SocialLink, TechSkill } from './types';
+import imagemAmazonQ from "./assets/images/amazonQ.png";
+import imagemManus from "./assets/images/manus.png";
+import imagemPortifolio from "./assets/images/portifolio.png";
+import imagemFlappyBird from "./assets/images/flappybird.png";
+import imagemCurriculo from "./assets/images/curriculo.png";
+import imagemUnderConstruction from "./assets/images/under-construction.jpg";
+import imagemCalendarioSeletivo from "./assets/images/calendarioseletivo.png";
+import imagemFormulario from "./assets/images/formulario.png";
 
 export const techSkills: TechSkill[] = [
   // Web Development
@@ -137,13 +145,13 @@ export const techSkills: TechSkill[] = [
   {
     id: 'amazonq',
     name: 'Amazon Q',
-    icon: 'src/assets/images/amazonQ.png',
+    icon: imagemAmazonQ,
     category: 'tool'
   },
   {
     id: 'manus',
     name: 'Manus',
-    icon: 'src/assets/images/manus.png',
+    icon: imagemManus,
     category: 'tool'
   }
 ];
@@ -153,7 +161,7 @@ export const projects: Project[] = [
     id: 'portfolio',
     title: 'Portfólio Pessoal',
     description: 'Meu portfólio pessoal desenvolvido com React, TypeScript e Tailwind CSS. Este aqui onde você está agora.',
-    imageUrl: '/src/assets/images/portifolio.png',
+    imageUrl: imagemPortifolio,
     projectUrl: '#',
     githubUrl: 'https://github.com/ven-del/portifolio',
     technologies: ['react', 'typescript', 'tailwind', 'vite', 'git', 'github']
@@ -162,7 +170,7 @@ export const projects: Project[] = [
     id: 'flappy-bird',
     title: 'Réplica Flappy Bird',
     description: 'Uma réplica do clássico para android e IOS para fins de estudos. Criado inteiramente com Python, pela biblioteca pygame.',
-    imageUrl: '/src/assets/images/flappybird.png',
+    imageUrl: imagemFlappyBird,
     projectUrl: '#',
     githubUrl: '#',
     technologies: ['python', 'git', 'github']
@@ -171,7 +179,7 @@ export const projects: Project[] = [
     id: 'labce-curriculo',
     title: 'Currículo Online',
     description: 'Currículo online desenvolvido com HTML, CSS puros (vanilla).',
-    imageUrl: '/src/assets/images/curriculo.png',
+    imageUrl: imagemCurriculo,
     projectUrl: 'https://labce-curriculo.vercel.app/',
     githubUrl: 'https://github.com/ven-del/atividade-curriculo',
     technologies: ['html', 'css', 'git', 'github']
@@ -180,7 +188,7 @@ export const projects: Project[] = [
     id: 'treinofacil',
     title: 'TreinoFacil',
     description: 'Projeto final da turma do Geração Tech 2.0. Ainda em construção. Tenha paciência. :)',
-    imageUrl: '/src/assets/images/under-construction.jpg',
+    imageUrl: imagemUnderConstruction,
     projectUrl: '#',
     githubUrl: 'https://github.com/ven-del/treinofacil',
     technologies: ['react', 'typescript', 'tailwind', 'vite', 'git', 'github']
@@ -189,7 +197,7 @@ export const projects: Project[] = [
     id: 'calendario-seletivo',
     title: 'Calendário Seletivo',
     description: 'Projeto feito para praticar o DOM utilizando JavaScript. Também foi utilizado para praticar versionamento colaborativo.',
-    imageUrl: '/src/assets/images/calendarioseletivo.png',
+    imageUrl: imagemCalendarioSeletivo,
     projectUrl: 'https://labce-calendario-interativo.vercel.app/',
     githubUrl: 'https://github.com/ven-del/exercicios-dom',
     technologies: ['html', 'css', 'javascript', 'bootstrap', 'git', 'github']
@@ -198,7 +206,7 @@ export const projects: Project[] = [
     id: 'tela-formulario',
     title: 'Formulário de Cadastro',
     description: 'Projeto feito para praticar o a criação de um formulário e uma tela atrativa, utilizando apenas HTML e CSS.',
-    imageUrl: '/src/assets/images/formulario.png',
+    imageUrl: imagemFormulario,
     projectUrl: 'https://labce-formulario.vercel.app/',
     githubUrl: 'https://github.com/ven-del/tela-login2',
     technologies: ['html', 'css', 'git', 'github']
