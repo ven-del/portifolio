@@ -1,6 +1,7 @@
 import { motion } from 'framer-motion';
 import SocialLinks from '../components/SocialLinks';
 import { socialLinks } from '../data';
+import profilePicture from "../assets/images/pfp5.jpg";
 
 const HomeSection = () => {
   return (
@@ -58,7 +59,7 @@ const HomeSection = () => {
         >
           <div className="w-56 h-56 sm:w-64 sm:h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white/20">
             <img
-              src="src\assets\images\pfp5.jpg"
+              src={profilePicture}
               alt="Wendell Regis"
               className="w-full h-full object-cover"
             />
