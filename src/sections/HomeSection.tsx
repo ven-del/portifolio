@@ -1,13 +1,11 @@
 import { motion } from 'framer-motion';
-import { Link } from 'react-scroll';
-import { FaChevronDown } from 'react-icons/fa';
 import SocialLinks from '../components/SocialLinks';
 import { socialLinks } from '../data';
 
 const HomeSection = () => {
   return (
-    <section id="home" className="section-container ">
-      <div className="container mx-auto flex items-center justify-center text-center gap-5">
+    <section id="home" className="section-container">
+      <div className="container mx-auto flex flex-col-reverse sm:flex-row items-center justify-center text-center gap-5">
         <div className='flex flex-col gap-8'>
           <motion.div
             initial={{ opacity: 0, y: -20 }}
@@ -15,8 +13,8 @@ const HomeSection = () => {
             transition={{ duration: 0.8 }}
             className="mb-8"
           >
-            <h1 className="text-4xl md:text-6xl font-bold mb-4">Wendell Regis</h1>
-            <h2 className="text-xl md:text-2xl font-medium text-white/80">
+            <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold mb-4">Wendell Regis</h1>
+            <h2 className="text-lg md:text-xl lg:text-2xl font-medium text-white/80">
               Desenvolvedor Full Stack
             </h2>
           </motion.div>
@@ -27,7 +25,7 @@ const HomeSection = () => {
             transition={{ delay: 0.5, duration: 0.8 }}
             className="max-w-2xl mb-12"
           >
-            <p className="text-lg">
+            <p className="text-base sm:text-lg">
               Olá! Sou Wendell Regis, desenvolvedor Full Stack com especialidade em React,
               Javascript e NodeJs. Tudo o que vê aqui não passa de espelhos e fumaça. <br></br>
               Quer que eu te ensine o truque?
@@ -56,9 +54,9 @@ const HomeSection = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.5, delay: 0.4 }}
           viewport={{ once: true }}
-          className="md:w-1/2 flex justify-center"
+          className="md:w-1/2 flex justify-center mb-6 sm:mb-0"
         >
-          <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white/20">
+          <div className="w-56 h-56 sm:w-64 sm:h-64 md:w-80 md:h-80 rounded-full overflow-hidden border-4 border-white/20">
             <img
               src="src\assets\images\pfp5.jpg"
               alt="Wendell Regis"

@@ -19,7 +19,8 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.5, delay: index * 0.2 }}
       viewport={{ once: true }}
-      className="card card-hover flex flex-col gap-3 w-full max-w-sm mx-auto"
+      className="card card-hover flex flex-col gap-3 w-full max-w-sm mx-auto transform-gpu"
+      style={{ transformOrigin: 'center' }}
     >
       <div className="aspect-video w-full overflow-hidden rounded-md mb-4">
         <img 

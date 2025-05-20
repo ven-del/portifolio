@@ -12,10 +12,10 @@ function App() {
   return (
     <>
       <div className="text-white p-4">
-        <div className="min-h-screen flex flex-col gap-5">
+        <div className="min-h-screen flex flex-col items-center gap-5">
           <Navbar />
           <StarField starCount={200} />
-          <main className="snap-y snap-mandatory h-screen overflow-y-auto scrollbar-hide">
+          <main className="overflow-y-auto scrollbar-hide mx-auto w-full max-w-7xl">
             <HomeSection />
             <AboutSection />
             <SkillsSection />

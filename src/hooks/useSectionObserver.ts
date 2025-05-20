@@ -5,7 +5,7 @@ const useSectionObserver = () => {
     const observerOptions = {
       root: null,
       rootMargin: '0px',
-      threshold: 0.3 // Trigger earlier for smoother transitions
+      threshold: 0.15 // Reduced threshold to trigger earlier
     };
     
 

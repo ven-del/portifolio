@@ -3,6 +3,7 @@ import { motion } from "framer-motion";
 import TechBadge from "../components/TechBadge";
 import { techSkills } from "../data";
 import type { TechCategory } from "../types";
+import { FiChevronRight } from "react-icons/fi";
 
 const SkillsSection = () => {
   const [activeCategory, setActiveCategory] = useState<TechCategory | "all">(
@@ -13,6 +14,7 @@ const SkillsSection = () => {
     y: number;
     text: string;
   } | null>(null);
+  const [showCategories, setShowCategories] = useState(false);
 
   const categories = [
     { id: "all", label: "Todas" },
@@ -33,7 +35,7 @@ const SkillsSection = () => {
   return (
     <section
       id="skills"
-      className="section-container bg-gradient-to-b from-black/40 to-black/10"
+      className="section-container"
     >
       <div className="container flex flex-col gap-8 mx-auto">
         <motion.h2
@@ -46,19 +48,30 @@ const SkillsSection = () => {
           Tecnologias que Utilizo
         </motion.h2>
 
+        <div className="sm:hidden flex justify-center mb-4">
+          <button 
+            onClick={() => setShowCategories(!showCategories)}
+            className="flex items-center gap-2 bg-white/10 hover:bg-white/20 px-4 py-2 rounded-full transition-all"
+          >
+            <span>Categorias</span>
+            <FiChevronRight className={`transform transition-transform ${showCategories ? 'rotate-90' : ''}`} />
+          </button>
+        </div>
+
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
           viewport={{ once: true }}
-          className="flex flex-wrap justify-center gap-8 text-2xl"
+          className={`flex flex-wrap justify-center gap-8 text-2xl ${showCategories ? 'block' : 'hidden'} sm:flex`}
         >
           {categories.map((category) => (
             <button
               key={category.id}
-              onClick={() =>
-                setActiveCategory(category.id as TechCategory | "all")
-              }
+              onClick={() => {
+                setActiveCategory(category.id as TechCategory | "all");
+                setShowCategories(false);
+              }}
               className={`p-10 cursor-pointer rounded-full transition-all ${
                 activeCategory === category.id
                   ? "bg-white/20 shadow-lg"
@@ -70,7 +83,7 @@ const SkillsSection = () => {
           ))}
         </motion.div>
 
-        <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 mt-8">
+        <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 pt-8">
           {filteredSkills.map((tech, index) => (
             <div
               key={tech.id}
