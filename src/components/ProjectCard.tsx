@@ -74,7 +74,7 @@ const ProjectCard = ({ project, index }: ProjectCardProps) => {
             
           >
             <button
-              className="btn btn-primary flex-1"
+              className="btn btn-primary flex-1 cursor-pointer"
             >
               <FaExternalLinkAlt /> Ver Projeto
             </button>
