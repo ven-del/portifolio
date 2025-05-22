@@ -79,7 +79,7 @@ const SkillsSection = () => {
         </motion.div>
 
         <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 pt-8">
-          {filteredSkills.map((tech, index) => (            <TooltipComponent content={tech.name}>
+          {filteredSkills.map((tech, index) => (<TooltipComponent content={tech.name}>
               <div
                 key={tech.id}
                 className="relative group w-16 h-16 md:w-20 md:h-20"
