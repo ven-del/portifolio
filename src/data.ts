@@ -178,11 +178,11 @@ export const projects: Project[] = [
   {
     id: 'labce-curriculo',
     title: 'Currículo Online',
-    description: 'Currículo online desenvolvido com HTML, CSS puros (vanilla).',
+    description: 'Currículo online desenvolvido com HTML, CSS e JavaScript puros (vanilla).',
     imageUrl: imagemCurriculo,
     projectUrl: 'https://labce-curriculo.vercel.app/',
     githubUrl: 'https://github.com/ven-del/atividade-curriculo',
-    technologies: ['html', 'css', 'git', 'github']
+    technologies: ['html', 'css', 'javascript', 'git', 'github']
   },
   {
     id: 'treinofacil',
