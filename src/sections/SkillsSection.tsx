@@ -28,10 +28,7 @@ const SkillsSection = () => {
       : techSkills.filter((skill) => skill.category === activeCategory);
 
   return (
-    <section
-      id="skills"
-      className="section-container"
-    >
+    <section id="skills" className="section-container">
       <div className="container flex flex-col gap-8 mx-auto">
         <motion.h2
           initial={{ opacity: 0, y: 20 }}
@@ -44,12 +41,16 @@ const SkillsSection = () => {
         </motion.h2>
 
         <div className="sm:hidden flex justify-center mb-4">
-          <button 
+          <button
             onClick={() => setShowCategories(!showCategories)}
             className="flex items-center gap-2 bg-white/10 hover:bg-white/20 px-4 py-2 rounded-full transition-all"
           >
             <span>Categorias</span>
-            <FiChevronRight className={`transform transition-transform ${showCategories ? 'rotate-90' : ''}`} />
+            <FiChevronRight
+              className={`transform transition-transform ${
+                showCategories ? "rotate-90" : ""
+              }`}
+            />
           </button>
         </div>
 
@@ -58,7 +59,9 @@ const SkillsSection = () => {
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.5, delay: 0.2 }}
           viewport={{ once: true }}
-          className={`flex flex-wrap justify-center gap-8 text-2xl ${showCategories ? 'block' : 'hidden'} sm:flex`}
+          className={`flex flex-wrap justify-center gap-8 text-2xl ${
+            showCategories ? "block" : "hidden"
+          } sm:flex`}
         >
           {categories.map((category) => (
             <button
@@ -79,15 +82,14 @@ const SkillsSection = () => {
         </motion.div>
 
         <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 pt-8">
-          {filteredSkills.map((tech, index) => (<TooltipComponent content={tech.name}>
-              <div
-                key={tech.id}
-                className="relative group w-16 h-16 md:w-20 md:h-20"
-              >
+          {filteredSkills.map((tech, index) => (
+            <TooltipComponent content={tech.name} key={tech.id}>
+              <div className="relative group w-16 h-16 md:w-20 md:h-20">
                 <TechBadge tech={tech} index={index} />
               </div>
             </TooltipComponent>
-          ))}        </div>
+          ))}{" "}
+        </div>
 
         <motion.div
           initial={{ opacity: 0 }}
