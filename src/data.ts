@@ -172,7 +172,7 @@ export const projects: Project[] = [
     description: 'Uma réplica do clássico para android e IOS para fins de estudos. Criado inteiramente com Python, pela biblioteca pygame.',
     imageUrl: imagemFlappyBird,
     projectUrl: '#',
-    githubUrl: '#',
+    githubUrl: 'https://github.com/Laboratorio-CE/FlappyBird',
     technologies: ['python', 'git', 'github']
   },
   {
