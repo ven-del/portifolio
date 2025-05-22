@@ -10,7 +10,9 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@heroui/popover": "^2.3.19",
     "@heroui/tooltip": "^2.2.16",
+    "@radix-ui/react-dialog": "^1.1.14",
     "@tailwindcss/vite": "^4.1.7",
     "framer-motion": "^12.12.1",
     "portifolio": "file:",

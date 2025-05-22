@@ -8,9 +8,12 @@ interface TooltipProps {
 
 const TooltipComponent = ({ content, children }: TooltipProps) => {
     return (
-        <Tooltip content={content}>
-            {children}
-        </Tooltip>
+      <Tooltip
+        content={content}
+        className="bg-(--cosmic-dark)/80 text-white p-6 rounded shadow-lg"
+      >
+        {children}
+      </Tooltip>
     );
 }
 
