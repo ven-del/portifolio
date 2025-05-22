@@ -3,18 +3,13 @@ import { motion } from "framer-motion";
 import TechBadge from "../components/TechBadge";
 import { techSkills } from "../data";
 import type { TechCategory } from "../types";
+import TooltipComponent from "../components/Tooltip";
 import { FiChevronRight } from "react-icons/fi";
 
 const SkillsSection = () => {
   const [activeCategory, setActiveCategory] = useState<TechCategory | "all">(
     "all"
-  );
-  const [tooltip, setTooltip] = useState<{
-    x: number;
-    y: number;
-    text: string;
-  } | null>(null);
-  const [showCategories, setShowCategories] = useState(false);
+  );  const [showCategories, setShowCategories] = useState(false);
 
   const categories = [
     { id: "all", label: "Todas" },
@@ -84,37 +79,15 @@ const SkillsSection = () => {
         </motion.div>
 
         <div className="grid grid-cols-3 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 pt-8">
-          {filteredSkills.map((tech, index) => (
-            <div
-              key={tech.id}
-              className="relative group w-16 h-16 md:w-20 md:h-20"
-              onMouseMove={(e) => {
-                setTooltip({
-                  x: e.clientX,
-                  y: e.clientY,
-                  text: tech.name,
-                });
-              }}
-              onMouseLeave={() => setTooltip(null)}
-            >
-              <TechBadge tech={tech} index={index} />
-            </div>
-          ))}
-        </div>
-
-        {/* Tooltip global */}
-        {tooltip && (
-          <span
-            className="fixed px-3 py-1 rounded bg-black/80 text-white text-xs pointer-events-none transition-opacity duration-200 whitespace-nowrap z-50"
-            style={{
-              top: tooltip.y + 10,
-              left: tooltip.x + 30,
-              transform: "translate(-50%, 0)",
-            }}
-          >
-            {tooltip.text}
-          </span>
-        )}
+          {filteredSkills.map((tech, index) => (            <TooltipComponent content={tech.name}>
+              <div
+                key={tech.id}
+                className="relative group w-16 h-16 md:w-20 md:h-20"
+              >
+                <TechBadge tech={tech} index={index} />
+              </div>
+            </TooltipComponent>
+          ))}        </div>
 
         <motion.div
           initial={{ opacity: 0 }}
