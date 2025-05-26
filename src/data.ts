@@ -7,6 +7,7 @@ import imagemCurriculo from "./assets/images/curriculo.png";
 import imagemUnderConstruction from "./assets/images/under-construction.jpg";
 import imagemCalendarioSeletivo from "./assets/images/calendarioseletivo.png";
 import imagemFormulario from "./assets/images/formulario.png";
+import imagemLabRental from "./assets/images/lab-rental.png";
 
 export const techSkills: TechSkill[] = [
   // Web Development
@@ -209,6 +210,15 @@ export const projects: Project[] = [
     imageUrl: imagemFormulario,
     projectUrl: 'https://labce-formulario.vercel.app/',
     githubUrl: 'https://github.com/ven-del/tela-login2',
+    technologies: ['html', 'css', 'git', 'github']
+  },
+  {
+    id: 'lab-rental',
+    title: 'Lab Rental',
+    description: 'Projeto feito em react para praticar o uso de componentes, arquitetura de pastas, consumo de API simulada no próprio frontend, axios, biblioteca de UI e mais.',
+    imageUrl: imagemLabRental,
+    projectUrl: 'https://labce-lab-rental.vercel.app/',
+    githubUrl: 'https://github.com/ven-del/aluga-jogos',
     technologies: ['html', 'css', 'git', 'github']
   },
 ];
