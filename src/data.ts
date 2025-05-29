@@ -8,6 +8,8 @@ import imagemUnderConstruction from "./assets/images/under-construction.jpg";
 import imagemCalendarioSeletivo from "./assets/images/calendarioseletivo.png";
 import imagemFormulario from "./assets/images/formulario.png";
 import imagemLabRental from "./assets/images/lab-rental.png";
+import pokedexImage from "./assets/images/pokedex.png";
+import ibgeImage from "./assets/images/ibge.png";
 
 export const techSkills: TechSkill[] = [
   // Web Development
@@ -215,11 +217,29 @@ export const projects: Project[] = [
   {
     id: 'lab-rental',
     title: 'Lab Rental',
-    description: 'Projeto feito em react para praticar o uso de componentes, arquitetura de pastas, consumo de API simulada no próprio frontend, axios, biblioteca de UI e mais.',
+    description: 'Projeto feito em react para praticar react e sua arquitetura. Aqui na minha máquina a API funciona.',
     imageUrl: imagemLabRental,
     projectUrl: 'https://labce-lab-rental.vercel.app/',
     githubUrl: 'https://github.com/ven-del/aluga-jogos',
     technologies: ['html', 'css', 'git', 'github']
+  },
+  {
+    id: 'ibge',
+    title: 'Consulta IBGE',
+    description: 'Um projeto simples em HTML, JavaScript e Bootstrap que consome a API do IBGE para exibir informações sobre estados e municípios. Feito inteiramente com o AmazonQ',
+    imageUrl: ibgeImage,
+    projectUrl: 'https://labce-consulta-ibge.vercel.app/',
+    githubUrl: 'https://github.com/ven-del/aula-api',
+    technologies: ['html', 'javascript', 'bootstrap', 'github']
+  },
+  {
+    id: 'pokedex',
+    title: 'Pokedex',
+    description: 'A clássica! Uma pokedex feita para praticar o consumo de APIs, utilizando React e Tailwind CSS.',
+    imageUrl: pokedexImage,
+    projectUrl: 'https://labce-pokedex.vercel.app/',
+    githubUrl: 'https://github.com/ven-del/pokedex',
+    technologies: ['react', 'tailwind', 'git', 'github']
   },
 ];
 
