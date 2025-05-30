@@ -230,7 +230,7 @@ export const projects: Project[] = [
     imageUrl: ibgeImage,
     projectUrl: 'https://labce-consulta-ibge.vercel.app/',
     githubUrl: 'https://github.com/ven-del/aula-api',
-    technologies: ['html', 'javascript', 'bootstrap', 'github']
+    technologies: ['html', 'javascript', 'bootstrap', 'amazonq', 'github']
   },
   {
     id: 'pokedex',
