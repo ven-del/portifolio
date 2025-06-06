@@ -217,7 +217,7 @@ export const projects: Project[] = [
   {
     id: 'lab-rental',
     title: 'Lab Rental',
-    description: 'Projeto feito em react para praticar react e sua arquitetura. Aqui na minha máquina a API funciona.',
+    description: 'Projeto feito em react para praticar react e sua arquitetura. Agora 100% integrado com backend e persistência de dados!',
     imageUrl: imagemLabRental,
     projectUrl: 'https://labce-lab-rental.vercel.app/',
     githubUrl: 'https://github.com/ven-del/aluga-jogos',
