@@ -10,6 +10,7 @@ import imagemFormulario from "./assets/images/formulario.png";
 import imagemLabRental from "./assets/images/lab-rental.png";
 import pokedexImage from "./assets/images/pokedex.png";
 import ibgeImage from "./assets/images/ibge.png";
+import treinoFacilImage from "./assets/images/treinofacil-landing.png"
 
 export const techSkills: TechSkill[] = [
   // Web Development
@@ -67,6 +68,12 @@ export const techSkills: TechSkill[] = [
     id: 'nodejs',
     name: 'Node.js',
     icon: 'https://skillicons.dev/icons?i=nodejs',
+    category: 'framework'
+  },
+  {
+    id: 'supabase',
+    name: 'Supabase',
+    icon: 'https://skillicons.dev/icons?i=supabase',
     category: 'framework'
   },
   
@@ -190,11 +197,11 @@ export const projects: Project[] = [
   {
     id: 'treinofacil',
     title: 'TreinoFacil',
-    description: 'Projeto final da turma do Geração Tech 2.0. Ainda em construção. Tenha paciência. :)',
-    imageUrl: imagemUnderConstruction,
+    description: 'Projeto Full Stack para apresentação final da turma do Geração Tech 2.0. Feito com React, TypeScript, Tailwind CSS e Node.js, utilizando o Supabase como banco de dados.',
+    imageUrl: treinoFacilImage,
     projectUrl: '#',
     githubUrl: 'https://github.com/ven-del/treinofacil',
-    technologies: ['react', 'typescript', 'tailwind', 'vite', 'git', 'github']
+    technologies: ['react', 'typescript', 'tailwind', 'vite', 'nodejs', 'supabase', 'git', 'github']
   },
   {
     id: 'calendario-seletivo',
