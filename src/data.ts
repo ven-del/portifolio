@@ -4,7 +4,7 @@ import imagemManus from "./assets/images/manus.png";
 import imagemPortifolio from "./assets/images/portifolio.png";
 import imagemFlappyBird from "./assets/images/flappybird.png";
 import imagemCurriculo from "./assets/images/curriculo.png";
-import imagemUnderConstruction from "./assets/images/under-construction.jpg";
+// import imagemUnderConstruction from "./assets/images/under-construction.jpg";
 import imagemCalendarioSeletivo from "./assets/images/calendarioseletivo.png";
 import imagemFormulario from "./assets/images/formulario.png";
 import imagemLabRental from "./assets/images/lab-rental.png";
