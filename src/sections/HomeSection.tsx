@@ -14,7 +14,7 @@ const HomeSection = () => {
             transition={{ duration: 0.8 }}
             className="mb-8"
           >
-            <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold mb-4">Wendell Regis</h1>
+            <h1 className="text-3xl md:text-4xl lg:text-6xl font-bold mb-4">Wendell Pereira</h1>
             <h2 className="text-lg md:text-xl lg:text-2xl font-medium text-white/80">
               Desenvolvedor Full Stack
             </h2>
@@ -27,7 +27,7 @@ const HomeSection = () => {
             className="max-w-2xl mb-12"
           >
             <p className="text-base sm:text-lg">
-              Olá! Sou Wendell Regis, desenvolvedor Full Stack com especialidade em React,
+              Olá! Sou Wendell Pereira, desenvolvedor Full Stack com especialidade em React,
               Javascript e NodeJs. Tudo o que vê aqui não passa de espelhos e fumaça. <br></br>
               Quer que eu te ensine o truque?
             </p>

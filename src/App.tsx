@@ -22,7 +22,7 @@ function App() {
             <ProjectsSection />
           </main>
           <footer className="py-6 text-center bg-black/10">
-            <p>Desenvolvido por Wendell Regis @ Laboratório.CE</p>
+            <p>Desenvolvido por Wendell Pereira @ Laboratório.CE</p>
           </footer>
         </div>
       </div>

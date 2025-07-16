@@ -1,6 +1,6 @@
 import type { Project, SocialLink, TechSkill } from './types';
 import imagemAmazonQ from "./assets/images/amazonQ.png";
-import imagemManus from "./assets/images/manus.png";
+import imagemCosmicWings from "./assets/images/cosmic-wings.jpg";
 import imagemPortifolio from "./assets/images/portifolio.png";
 import imagemFlappyBird from "./assets/images/flappybird.png";
 import imagemCurriculo from "./assets/images/curriculo.png";
@@ -11,6 +11,7 @@ import imagemLabRental from "./assets/images/lab-rental.png";
 import pokedexImage from "./assets/images/pokedex.png";
 import ibgeImage from "./assets/images/ibge.png";
 import treinoFacilImage from "./assets/images/treinofacil-landing.png"
+import imagemListaDinamica from "./assets/images/lista-dinamica.png";
 
 export const techSkills: TechSkill[] = [
   // Web Development
@@ -157,12 +158,6 @@ export const techSkills: TechSkill[] = [
     name: 'Amazon Q',
     icon: imagemAmazonQ,
     category: 'tool'
-  },
-  {
-    id: 'manus',
-    name: 'Manus',
-    icon: imagemManus,
-    category: 'tool'
   }
 ];
 
@@ -186,6 +181,15 @@ export const projects: Project[] = [
     technologies: ['python', 'git', 'github']
   },
   {
+    id: 'cosmic-wings',
+    title: 'Cosmic Wings',
+    description: `O primeiro jogo desenvolvido pelo Laboratório.CE. Shoot'em up feito em Typescript, utilizando a biblioteca Phaser e Supabase para gerenciar o placar global.`,
+    imageUrl: imagemCosmicWings,
+    projectUrl: '#',
+    githubUrl: 'https://github.com/Laboratorio-CE/FlappyBird',
+    technologies: ['typescript', 'react', 'supabase', 'git', 'github']
+  },
+  {
     id: 'labce-curriculo',
     title: 'Currículo Online',
     description: 'Currículo online desenvolvido com HTML, CSS e JavaScript puros (vanilla).',
@@ -195,11 +199,20 @@ export const projects: Project[] = [
     technologies: ['html', 'css', 'javascript', 'git', 'github']
   },
   {
+    id: 'lista-dinamica',
+    title: 'Lista Dinâmica',
+    description: 'Projeto full stack de lista de tarefas, onde você pode adicionar, remover e marcar tarefas como concluídas. Desenvolvido com React e Tailwind CSS para o frontend, e Python com Django e PostgreSQL para o backend e base de dados.',
+    imageUrl: imagemListaDinamica,
+    projectUrl: 'https://labce-lista-dinamica.vercel.app/',
+    githubUrl: 'https://github.com/ven-del/lista-de-tarefas-frontend',
+    technologies: ['react', 'tailwind', 'javascript', 'python', 'git', 'github']
+  },
+  {
     id: 'treinofacil',
     title: 'TreinoFacil',
     description: 'Projeto Full Stack para apresentação final da turma do Geração Tech 2.0. Feito com React, TypeScript, Tailwind CSS e Node.js, utilizando o Supabase como banco de dados.',
     imageUrl: treinoFacilImage,
-    projectUrl: '#',
+    projectUrl: 'https://labce-treinofacil.vercel.app/',
     githubUrl: 'https://github.com/ven-del/treinofacil',
     technologies: ['react', 'typescript', 'tailwind', 'vite', 'nodejs', 'supabase', 'git', 'github']
   },
